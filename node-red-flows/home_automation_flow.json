@@ -1,0 +1,137 @@
+[
+  {
+    "id": "mqtt_in",
+    "type": "mqtt in",
+    "z": "flow1",
+    "name": "DHT11 Sensor Data",
+    "topic": "esp8266/dht11",
+    "qos": "0",
+    "datatype": "auto",
+    "broker": "mqtt-broker",
+    "x": 200,
+    "y": 100,
+    "wires": [
+      [
+        "debug1",
+        "chart1"
+      ]
+    ]
+  },
+  {
+    "id": "mqtt_in2",
+    "type": "mqtt in",
+    "z": "flow1",
+    "name": "Ultrasonic Sensor Data",
+    "topic": "esp8266/ultrasonic",
+    "qos": "0",
+    "datatype": "auto",
+    "broker": "mqtt-broker",
+    "x": 200,
+    "y": 200,
+    "wires": [
+      [
+        "debug2",
+        "chart2"
+      ]
+    ]
+  },
+  {
+    "id": "chart1",
+    "type": "ui_chart",
+    "z": "flow1",
+    "name": "Temperature & Humidity",
+    "group": "group1",
+    "order": 1,
+    "width": "6",
+    "height": "4",
+    "x": 500,
+    "y": 100,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
+    "id": "chart2",
+    "type": "ui_chart",
+    "z": "flow1",
+    "name": "Distance Monitoring",
+    "group": "group1",
+    "order": 2,
+    "width": "6",
+    "height": "4",
+    "x": 500,
+    "y": 200,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
+    "id": "debug1",
+    "type": "debug",
+    "z": "flow1",
+    "name": "Debug DHT11",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 500,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "debug2",
+    "type": "debug",
+    "z": "flow1",
+    "name": "Debug Ultrasonic",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 500,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "mqtt-broker",
+    "type": "mqtt-broker",
+    "name": "Local MQTT Broker",
+    "broker": "127.0.0.1",
+    "port": "1883",
+    "clientid": "",
+    "usetls": false,
+    "compatmode": true,
+    "keepalive": "60",
+    "cleansession": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthPayload": "",
+    "closeTopic": "",
+    "closePayload": "",
+    "willTopic": "",
+    "willQos": "0",
+    "willPayload": ""
+  },
+  {
+    "id": "group1",
+    "type": "ui_group",
+    "name": "Home Automation Dashboard",
+    "tab": "tab1",
+    "order": 1,
+    "disp": true,
+    "width": "12",
+    "collapse": false
+  },
+  {
+    "id": "tab1",
+    "type": "ui_tab",
+    "name": "Main Dashboard",
+    "icon": "dashboard",
+    "order": 1
+  }
+]
