@@ -15,7 +15,7 @@ This project implements a cost-effective IoT-based home automation system. It in
 - **Software:** Node-RED, MQTT (Mosquitto), MariaDB, Arduino IDE
 
 ## System Architecture
-![Architecture Diagram](docs/architecture-diagram.jpeg)
+![Architecture Diagram](docs/architecture-diagram.jpg)
 
 ## Setup Instructions
 ### Raspberry Pi
@@ -41,15 +41,23 @@ This project implements a cost-effective IoT-based home automation system. It in
 - Flash ESP8266 boards using Arduino IDE.
 - Example sketches are in `esp8266/`.
 
+![client1](docs/client1.jpg)
+![client2](docs/client2.jpg)
+
 ### Node-RED
 - Import flow JSON from `node-red-flows/home_automation_flow.json`.
 - Access dashboard at:  
   `http://<raspberry-pi-ip>:1880/ui`
 
+![nodered](docs/node-red-flow.jpg)
+
 ## Project Outcomes
 - 98% uptime and <500ms latency
 - Real-time data visualization and control
 - Scalable and low-cost IoT home automation
+
+![output](docs/output-dashboard.jpg)
+![mariaDB](docs/mariaDB.jpg)
 
 ## Future Enhancements
 - Add support for Alexa/Google Assistant
