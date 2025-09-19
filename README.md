@@ -15,7 +15,7 @@ This project implements a cost-effective IoT-based home automation system. It in
 - **Software:** Node-RED, MQTT (Mosquitto), MariaDB, Arduino IDE
 
 ## System Architecture
-![Architecture Diagram](docs/architecture-diagram.png)
+![Architecture Diagram](docs/architecture-diagram.jpeg)
 
 ## Setup Instructions
 ### Raspberry Pi
